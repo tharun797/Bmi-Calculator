@@ -19,7 +19,7 @@ class HeightCard extends StatelessWidget {
       padding: const EdgeInsets.only(right: 15),
       child: GestureDetector(
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 20),
+          padding: const EdgeInsets.symmetric(vertical: 19),
           decoration: kBoxDecoration,
           child: Center(
             child: Column(
@@ -50,19 +50,16 @@ class HeightCard extends StatelessWidget {
                       minorTickSize: const Size(15.0, 1.2),
                       tickOffset: const Offset(20.0, -1),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 40),
-                      child: SfSlider.vertical(
-                        min: 110,
-                        max: 250,
-                        value: height.toDouble(),
-                        interval: 20,
-                        showTicks: true,
-                        showLabels: true,
-                        enableTooltip: true,
-                        minorTicksPerInterval: 3,
-                        onChanged: onChanged,
-                      ),
+                    child: SfSlider.vertical(
+                      min: 110,
+                      max: 250,
+                      value: height.toDouble(),
+                      interval: 20,
+                      showTicks: true,
+                      showLabels: true,
+                      enableTooltip: true,
+                      minorTicksPerInterval: 3,
+                      onChanged: onChanged,
                     ),
                   ),
                 )
